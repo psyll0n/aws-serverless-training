@@ -1,0 +1,16 @@
+{
+  "name": "kinesis-producer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-kinesis": "^3.458.0",
+    "@faker-js/faker": "^8.3.1",
+    "moment": "^2.29.4"
+  }
+}
