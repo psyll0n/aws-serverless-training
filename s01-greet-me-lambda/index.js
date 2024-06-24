@@ -41,7 +41,7 @@
 //     console.warn("A warning message...");
 // };
 
-const moment =  require('moment');
+import moment from 'moment';
 const greeting = {
     "en": "Hello",
     "fr": "Bonjour",
@@ -54,7 +54,7 @@ const greeting = {
     "ar": "Ahlan"
 }
 
-exports.handler = async (event) => {
+export const handler = async (event) => {
     let name = event.pathParameters.name;
     let {lang, ...info} = event.queryStringParameters;
 
