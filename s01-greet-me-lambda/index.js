@@ -56,7 +56,7 @@ const greeting = {
 
 export const handler = async (event) => {
     let name = event.pathParameters.name;
-    let {lang, ...info} = event.queryStringParameters || {};
+    let {lang, ...info} = event.queryStringParameters;
 
     let message = `${greeting[lang] ? greeting[lang] : greeting['en'] } ${name}`;
     let response = {
@@ -66,6 +66,9 @@ export const handler = async (event) => {
     }
     return {
         statusCode: 200,
+        headers: {
+            "Access-Control-Allow-Origin": "*" // Required for CORS support to work
+        },
         body: JSON.stringify(response)
     }
 }
